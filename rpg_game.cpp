@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "string_functions.h"
 
 class Character
 {
@@ -28,13 +28,22 @@ class Player public: Character
     }
     void get_player_class()
     {
-      std::cout << "and you are a: "
+      std::cout << "and you are a: ";
       std::cin >> player_class;
 
       player_class = capitialize(player_class);
     }
 
 };
+
+class Wizard public : Player
+{
+
+};
+
+
+
+class Enemy
 
 int main()
 {

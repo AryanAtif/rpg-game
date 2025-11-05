@@ -1,4 +1,5 @@
 #include <iostream>
+#include "string_functions.h"
 
 int strlength (std::string input_string)
 {

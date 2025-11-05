@@ -1,10 +1,10 @@
 #include <iostream>
 #include "string_functions.h"
-
 class Character
 {
   private:
     std::string character_name;
+  protected: 
     int health;
   public:
     Character () : health(100)
@@ -36,11 +36,30 @@ class Player public: Character
 
 };
 
-class Wizard public : Player
+
+class Soldier public : Player
 {
+  public:
 
+    // Attack functions
+    //
+    void shoot(Enemy enemy_character)
+    {
+      enemy_character.health -= 5;
+    }
+
+    void launch_rocket(Enemy enemy_character)
+    {
+      //TODO: Add a possible debuff here
+      enemy_character.health -= 15;
+    }
+
+    void call_in_airstrikes(Enemy enemy_character)
+    {
+      //TODO: Add a possible debuff here as well
+      enemy_character.health -= 25;
+    }
 };
-
 
 
 class Enemy

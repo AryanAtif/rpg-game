@@ -43,7 +43,7 @@ class Soldier public : Player
 
     // Attack functions
     //
-    void shoot(Enemy enemy_character)
+    void shoot_gun(Enemy enemy_character)
     {
       enemy_character.health -= 5;
     }
@@ -62,6 +62,29 @@ class Soldier public : Player
 };
 
 
+class archer public : Player
+{
+  public:
+
+    // Attack functions
+    //
+    void shoot_arrow (Enemy enemy_character)
+    {
+      enemy_character.health -= 5;
+    }
+
+    void shoot_flame_arrow (Enemy enemy_character)
+    {
+      //TODO: Add a possible debuff here
+      enemy_character.health -= 15;
+    }
+
+    void shoot_nuclear_arrow (Enemy enemy_character)
+    {
+      //TODO: Add a possible debuff here as well
+      enemy_character.health -= 25;
+    }
+};
 class Enemy
 
 int main()

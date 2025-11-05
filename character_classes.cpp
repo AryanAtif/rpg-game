@@ -1,6 +1,12 @@
 #include <iostream> 
 #include "character_classes.h"
 
+const int ENEMY_ADVANTAGE = 1;
+const int ATTACK1 = 5;
+const int ATTACK2 = 15;
+const int ATTACK3 = 25;
+
+
 // Character class 
 
 Character::Character()
@@ -27,38 +33,57 @@ void get_player_class::Player ()
 //
 void shoot_gun::Soldier(Enemy enemy_character)
 {
-  enemy_character.health -= 5;
+  enemy_character.health -= ATTACK1;
 }
 
 void launch_rocket::Soldier(Enemy enemy_character)
 {
  //TODO: Add a possible debuff here
- enemy_character.health -= 15;
+ enemy_character.health -= ATTACK2;
 }
 
 void call_in_airstrikes::Soldier(Enemy enemy_character)
 {
   //TODO: Add a possible debuff here as well
-  enemy_character.health -= 25;
+  enemy_character.health -= ATTACK3;
 }
 
 // Archer Class class (haha 2)
 //
 void shoot_arrow::Archer (Enemy enemy_character)
 {
-  enemy_character.health -= 5;
+  enemy_character.health -= ATTACK1;
 }
 
 void shoot_flame_arrow::Archer (Enemy enemy_character)
 {
   //TODO: Add a possible debuff here
-  enemy_character.health -= 15;
+  enemy_character.health -= ATTACK2;
 }
 void shoot_nuclear_arrow (Enemy enemy_character)
 {
   //TODO: Add a possible debuff here as well
-  enemy_character.health -= 25;
+  enemy_character.health -= ATTACK3;
 }
+
+// Enemy Class
+//
+
+void attack1::Enemy (Player player)
+{
+  player.health -= (ATTACK1*ENEMY_ADVANTAGE);
+}
+
+void attack2::Enemy (Player player)
+{
+  player.health -= (ATTACK2*ENEMY_ADVANTAGE);
+}
+
+void attack3::Enemy (Player player)
+{
+  player.health -= (ATTACK3*ENEMY_ADVANTAGE);
+}
+
 
 
 

@@ -1,3 +1,5 @@
+#ifndef CHARACTER_CLASSES_H
+#define CHARACTER_CLASSES_H
 
 class Character
 {
@@ -47,6 +49,15 @@ class archer public : Player
 
 class Enemy
 {
+  public:
+    // Attacks
+    //
+    void attack1 (Player player);
+    void attack2 (Player player);
+    void attack3 (Player player);
 
+    
 };
+
+#endif
 

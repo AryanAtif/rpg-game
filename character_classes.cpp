@@ -1,94 +1,64 @@
-#include "character_classes.h"
 #include <iostream> 
+#include "character_classes.h"
 
-class Character
+// Character class 
+
+Character::Character()
 {
-  private:
-    std::string character_name;
-  protected: 
-    int health;
-  public:
-    Character () : health(100)
-    {
-    }
-};
+  health = 100; 
+}
 
-class Player public: Character
+// Player class 
+
+void get_player_name::Player ()
 {
-  private:
-    std::string player_name;
-    std::string player_class; // class here means the wizard class or the knight class
-  
-  public:
+  std::cout << "The soldier shall be called: ";
+  std::getline(std::cin, player_name);
+}
 
-
-    void get_player_name()
-    {
-      std::cout << "The soldier shall be called: ";
-      std::getline(std::cin, player_name);
-    }
-    void get_player_class()
-    {
-      std::cout << "and you are a: ";
-      std::cin >> player_class;
-
-      player_class = capitialize(player_class);
-    }
-
-};
-
-
-class Soldier public : Player
+void get_player_class::Player ()
 {
-  public:
+  std::cout << "and you are a: ";
+  std::cin >> player_class;
+  player_class = capitialize(player_class);
+}
 
-    // Attack functions
-    //
-    void shoot_gun(Enemy enemy_character)
-    {
-      enemy_character.health -= 5;
-    }
-
-    void launch_rocket(Enemy enemy_character)
-    {
-      //TODO: Add a possible debuff here
-      enemy_character.health -= 15;
-    }
-
-    void call_in_airstrikes(Enemy enemy_character)
-    {
-      //TODO: Add a possible debuff here as well
-      enemy_character.health -= 25;
-    }
-};
-
-
-class archer public : Player
+// Soldier Class class (haha)
+//
+void shoot_gun::Soldier(Enemy enemy_character)
 {
-  public:
+  enemy_character.health -= 5;
+}
 
-    // Attack functions
-    //
-    void shoot_arrow (Enemy enemy_character)
-    {
-      enemy_character.health -= 5;
-    }
-
-    void shoot_flame_arrow (Enemy enemy_character)
-    {
-      //TODO: Add a possible debuff here
-      enemy_character.health -= 15;
-    }
-
-    void shoot_nuclear_arrow (Enemy enemy_character)
-    {
-      //TODO: Add a possible debuff here as well
-      enemy_character.health -= 25;
-    }
-};
-
-class Enemy
+void launch_rocket::Soldier(Enemy enemy_character)
 {
+ //TODO: Add a possible debuff here
+ enemy_character.health -= 15;
+}
 
-};
+void call_in_airstrikes::Soldier(Enemy enemy_character)
+{
+  //TODO: Add a possible debuff here as well
+  enemy_character.health -= 25;
+}
+
+// Archer Class class (haha 2)
+//
+void shoot_arrow::Archer (Enemy enemy_character)
+{
+  enemy_character.health -= 5;
+}
+
+void shoot_flame_arrow::Archer (Enemy enemy_character)
+{
+  //TODO: Add a possible debuff here
+  enemy_character.health -= 15;
+}
+void shoot_nuclear_arrow (Enemy enemy_character)
+{
+  //TODO: Add a possible debuff here as well
+  enemy_character.health -= 25;
+}
+
+
 

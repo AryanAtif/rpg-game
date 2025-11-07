@@ -15,45 +15,52 @@ Character::Character()
   health = HEALTH; 
 }
 
-// Player class 
+//////////////////// Player class 
 
-void get_player_name::Player ()
+// Player input/output
+void m_get_player_name::Player ()
 {
   std::cout << "The soldier shall be called: ";
   std::getline(std::cin, player_name);
 }
 
-void get_player_class::Player ()
+void m_get_player_class::Player ()
 {
   std::cout << "and you are a: ";
   std::cin >> player_class;
   player_class = capitialize(player_class);
 }
 
-void put_player_name::Player ()
+void m_put_player_name::Player ()
 {
   std::cout << player_name;
 }
-void put_player_health::Player ()
+void m_put_player_health::Player ()
 {
   std::cout << health;
 }
 
+// Player attacks
 
-// Soldier Class class (haha)
-//
-void shoot_gun::Soldier(Enemy enemy_character)
+void m_attack1(Enemy enemy)
+{
+
+}
+
+///////////////////// Soldier Class class (haha)
+
+void m_shoot_gun::Soldier(Enemy enemy_character)
 {
   enemy_character.health -= ATTACK1;
 }
 
-void launch_rocket::Soldier(Enemy enemy_character)
+void m_launch_rocket::Soldier(Enemy enemy_character)
 {
  //TODO: Add a possible debuff here
  enemy_character.health -= ATTACK2;
 }
 
-void call_in_airstrikes::Soldier(Enemy enemy_character)
+void m_call_in_airstrikes::Soldier(Enemy enemy_character)
 {
   //TODO: Add a possible debuff here as well
   enemy_character.health -= ATTACK3;
@@ -61,17 +68,17 @@ void call_in_airstrikes::Soldier(Enemy enemy_character)
 
 // Archer Class class (haha 2)
 //
-void shoot_arrow::Archer (Enemy enemy_character)
+void m_shoot_arrow::Archer (Enemy enemy_character)
 {
   enemy_character.health -= ATTACK1;
 }
 
-void shoot_flame_arrow::Archer (Enemy enemy_character)
+void m_shoot_flame_arrow::Archer (Enemy enemy_character)
 {
   //TODO: Add a possible debuff here
   enemy_character.health -= ATTACK2;
 }
-void shoot_nuclear_arrow (Enemy enemy_character)
+void m_shoot_nuclear_arrow (Enemy enemy_character)
 {
   //TODO: Add a possible debuff here as well
   enemy_character.health -= ATTACK3;
@@ -79,22 +86,22 @@ void shoot_nuclear_arrow (Enemy enemy_character)
 
 // Enemy Class
 //
-void put_enemy_health::Enemy()
+void m_put_enemy_health::Enemy()
 {
   std::cout << health;
 }
 
-void attack1::Enemy (Player player)
+void m_attack1::Enemy (Player player)
 {
   player.health -= (ATTACK1*ENEMY_ADVANTAGE);
 }
 
-void attack2::Enemy (Player player)
+void m_attack2::Enemy (Player player)
 {
   player.health -= (ATTACK2*ENEMY_ADVANTAGE);
 }
 
-void attack3::Enemy (Player player)
+void m_attack3::Enemy (Player player)
 {
   player.health -= (ATTACK3*ENEMY_ADVANTAGE);
 }

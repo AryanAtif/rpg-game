@@ -17,38 +17,38 @@ Character::Character()
   attack3_count{0};
 }
 
+void m_put_health::Character()
+{
+  std::cout << health;
+}
 //////////////////// Player class 
 
 // Player input/output
-void m_get_player_name::Player ()
+void m_get_name::Player ()
 {
   std::cout << "What shall I call you: ";
   std::getline(std::cin, player_name);
 }
 
-void m_get_player_class::Player ()
+void m_get_class::Player ()
 {
   std::cout << "and you are a: ";
   std::cin >> player_class;
   player_class = capitialize(player_class);
 }
 
-void m_put_player_name::Player ()
+void m_put_name::Player ()
 {
   std::cout << player_name;
 }
-void m_put_player_class::Player ()
+void m_put_class::Player ()
 {
   std::cout << player_class;
-}
-void m_put_player_health::Player ()
-{
-  std::cout << health;
 }
 
 // Player attacks
 
-void m_attack1(Enemy enemy)
+void m_attack1 :: Player(Enemy enemy)
 {
   if(player_class == "SOLDIER")
   {
@@ -60,7 +60,7 @@ void m_attack1(Enemy enemy)
   }
 }
 
-void m_attack2(Enemy enemy)
+void m_attack2 :: Player(Enemy enemy)
 {
   if (attack2_count < 3)
   {
@@ -82,7 +82,7 @@ void m_attack2(Enemy enemy)
   }
 }
 
-void m_attack3(Enemy enemy)
+void m_attack3 :: Player(Enemy enemy)
 {
   if (attack3_count < 1)
   {
@@ -104,6 +104,24 @@ void m_attack3(Enemy enemy)
   }
 }
 
+
+// Enemy Class
+//
+
+void m_attack1::Enemy (Player player)
+{
+  player.health -= (ATTACK1*ENEMY_ADVANTAGE);
+}
+
+void m_attack2::Enemy (Player player)
+{
+  player.health -= (ATTACK2*ENEMY_ADVANTAGE);
+}
+
+void m_attack3::Enemy (Player player)
+{
+  player.health -= (ATTACK3*ENEMY_ADVANTAGE);
+}
 ///////////////////// Soldier Class class (haha)
 
 void m_shoot_gun::Soldier(Enemy enemy)
@@ -137,28 +155,6 @@ void m_shoot_flame_arrow::Archer (Enemy enemy)
 void m_shoot_nuclear_arrow::Archer (Enemy enemy)
 {
   enemy.health -= ATTACK3;
-}
-
-// Enemy Class
-//
-void m_put_enemy_health::Enemy()
-{
-  std::cout << health;
-}
-
-void m_attack1::Enemy (Player player)
-{
-  player.health -= (ATTACK1*ENEMY_ADVANTAGE);
-}
-
-void m_attack2::Enemy (Player player)
-{
-  player.health -= (ATTACK2*ENEMY_ADVANTAGE);
-}
-
-void m_attack3::Enemy (Player player)
-{
-  player.health -= (ATTACK3*ENEMY_ADVANTAGE);
 }
 
 

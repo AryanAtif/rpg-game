@@ -23,7 +23,7 @@ int main()
   player1.m_get_player_class();
   std::cout << std::endl;
   std::cout << "you are "; player1.m_put_player_name(); std::cout << std::endl;
-  std::cout << "and you're a: "
+  std::cout << "and you're a: "; m_put_player_class(); std::cout << std:;endl;
   
   // TODO: Title
   //

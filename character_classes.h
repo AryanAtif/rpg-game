@@ -20,7 +20,7 @@ class Character
     Character ();//: health(100)
 };
 
-class Player public: Character
+class Player : public Character
 {
   private:
     std::string player_name;
@@ -35,7 +35,7 @@ class Player public: Character
 };
 
 
-class Soldier public : Player
+class Soldier : public Player
 {
   public:
 
@@ -47,7 +47,7 @@ class Soldier public : Player
 };
 
 
-class archer public : Player
+class Archer : public Player
 {
   public:
 
@@ -58,7 +58,7 @@ class archer public : Player
     void m_shoot_nuclear_arrow (Enemy enemy_character);
 };
 
-class Enemy
+class Enemy : public Character
 {
   public:
     void m_put_health();

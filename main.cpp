@@ -39,7 +39,7 @@ void attack1(Enemy enemy, Player player)
 {
   std::cout << "The Giant lands down his fist on ";
   // name
-  std::cout << "-5 HP for the player. You're health is now: ";
+  std::cout << "-" << ATTACK1 << "HP! You're health is now: ";
   enemy.attack1(player); 
 
 }

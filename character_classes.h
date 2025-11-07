@@ -27,6 +27,8 @@ class Player public: Character
   public:
     void get_player_name();
     void get_player_class();
+    void put_player_name();
+    void put_player_health();
 
 };
 
@@ -57,6 +59,7 @@ class archer public : Player
 class Enemy
 {
   public:
+    void put_health();
     // Attacks
     //
     void attack1 (Player player);

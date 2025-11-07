@@ -79,6 +79,10 @@ void shoot_nuclear_arrow (Enemy enemy_character)
 
 // Enemy Class
 //
+void put_enemy_health::Enemy()
+{
+  std::cout << health;
+}
 
 void attack1::Enemy (Player player)
 {

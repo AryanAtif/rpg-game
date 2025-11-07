@@ -2,14 +2,14 @@
 #include "string_functions.h"
 #include "character_classes.h"
 
-void attack1(Player player);
-void attack1(Enemy enemy);
+void attack1(Player player, Enemy enemy); //attack on the player
+void attack1(Enemy enemy, Player player);
 
-void attack2(Player player);
-void attack2(Enemy enemy);
+void attack2(Player player, Enemy enemy);
+void attack2(Enemy enemy, Player player);
 
-void attack3(Player player);
-void attack3(Enemy enemy);
+void attack3(Player player, Enemy enemy);
+void attack3(Enemy enemy, Player player);
 
 
 int main()
@@ -33,4 +33,13 @@ int main()
   //
   //
   return 0;
+}
+
+void attack1(Enemy enemy, Player player)
+{
+  std::cout << "The Giant lands down his fist on ";
+  // name
+  std::cout << "-5 HP for the player. You're health is now: ";
+  enemy.attack1(player); 
+
 }

@@ -30,6 +30,16 @@ void get_player_class::Player ()
   player_class = capitialize(player_class);
 }
 
+void put_player_name::Player ()
+{
+  std::cout << player_name;
+}
+void put_player_health::Player ()
+{
+  std::cout << health;
+}
+
+
 // Soldier Class class (haha)
 //
 void shoot_gun::Soldier(Enemy enemy_character)

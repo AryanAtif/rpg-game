@@ -14,6 +14,8 @@ class Character
     std::string character_name;
   protected: 
     int health;
+    int attack2_count;
+    int attack3_count;
   public:
     Character ();//: health(100)
 };

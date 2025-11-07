@@ -27,7 +27,7 @@ int main()
   //  // 10 percent chance for the attack2, but if not done three time before
   //  // 50 percent chance for the attack3, but if enemy's health is 50% of the player, and haven't done before.
   //
-  // The one that reaches zero health looses.
+  // The one that reaches zero health loses.
   // Show stats after the game (e.g. number of hits by the player and by the enemy, number of attack1, 2 and 3, time taken to beat the
   // enemy)
   //

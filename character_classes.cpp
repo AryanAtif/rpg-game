@@ -13,6 +13,8 @@ const int ATTACK3 = 25;
 Character::Character()
 {
   health = HEALTH; 
+  attack2_count{0};
+  attack3_count{0};
 }
 
 //////////////////// Player class 
@@ -44,44 +46,93 @@ void m_put_player_health::Player ()
 
 void m_attack1(Enemy enemy)
 {
+  if(player_class == "SOLDIER")
+  {
+    m_shoot_gun(enemy);
+  }
+  else if (player_class == "ARCHER")
+  {
+    m_shoot_arrow(enemy);
+  }
+}
 
+void m_attack2(Enemy enemy)
+{
+  if (attack2_count < 3)
+  {
+    if(player_class == "SOLDIER")
+    {
+      m_launch_rocket(enemy);
+      attack2_count++;
+    }
+    else if (player_class == "ARCHER")
+    {
+      m_shoot_flame_arrow(enemy);
+      attack2_count++;
+    }
+  }
+  else
+  {
+    std::cout << "Reached the limit for the attack 2" << std::endl;
+    m_attack1(enemy);
+  }
+}
+
+void m_attack3(Enemy enemy)
+{
+  if (attack3_count < 1)
+  {
+    if(player_class == "SOLDIER")
+    {
+      m_call_in_airstrikes(enemy);
+      attack3_count++;
+    }
+    else if (player_class == "ARCHER")
+    {
+      m_shoot_nuclear_arrow(enemy); 
+      attack3_count++;
+    }
+  }
+  else
+  {
+    std::cout << "Reached the limit for the attack 3" << std::endl;
+    m_attack2(enemy);
+  }
 }
 
 ///////////////////// Soldier Class class (haha)
 
-void m_shoot_gun::Soldier(Enemy enemy_character)
+void m_shoot_gun::Soldier(Enemy enemy)
 {
-  enemy_character.health -= ATTACK1;
+  enemy.health -= ATTACK1;
 }
 
-void m_launch_rocket::Soldier(Enemy enemy_character)
+void m_launch_rocket::Soldier(Enemy enemy)
 {
  //TODO: Add a possible debuff here
- enemy_character.health -= ATTACK2;
+ enemy.health -= ATTACK2;
 }
 
-void m_call_in_airstrikes::Soldier(Enemy enemy_character)
-{
+void m_call_in_airstrikes::Soldier(Enemy enemy)
+
   //TODO: Add a possible debuff here as well
-  enemy_character.health -= ATTACK3;
+  enemy.health -= ATTACK3;
 }
 
 // Archer Class class (haha 2)
 //
-void m_shoot_arrow::Archer (Enemy enemy_character)
+void m_shoot_arrow::Archer (Enemy enemy)
 {
-  enemy_character.health -= ATTACK1;
+  enemy.health -= ATTACK1;
 }
 
-void m_shoot_flame_arrow::Archer (Enemy enemy_character)
+void m_shoot_flame_arrow::Archer (Enemy enemy)
 {
-  //TODO: Add a possible debuff here
-  enemy_character.health -= ATTACK2;
+  enemy.health -= ATTACK2;
 }
-void m_shoot_nuclear_arrow (Enemy enemy_character)
+void m_shoot_nuclear_arrow::Archer (Enemy enemy)
 {
-  //TODO: Add a possible debuff here as well
-  enemy_character.health -= ATTACK3;
+  enemy.health -= ATTACK3;
 }
 
 // Enemy Class

@@ -14,6 +14,15 @@ void attack3(Enemy enemy, Player player);
 
 int main()
 {
+  Player player1;
+  std::cout << "You can here and dare to constest the might of the great giant of the cave?" << std::endl;
+  std::cout << std::endl;
+  player1.m_get_player_name(); 
+  std::cout << std::endl;
+  player1.m_get_player_class();
+  std::cout << std::endl;
+  std::cout "you are "; player1.m_put_player_name(); std::cout << std::endl;
+  
   // TODO: Title
   //
   // Take the player's name and their class as input
@@ -35,10 +44,16 @@ int main()
   return 0;
 }
 
+void attack1(Player player, Enemy enemy)
+{
+  std::cout << "Goblin shot!" << std::endl;
+  std::cout << "-" << ATTACK1 << " HP damage dealt on the giant." << std::endl;
+  std::cout << "The giant\'s health is now: " << 
+}
 void attack1(Enemy enemy, Player player)
 {
   std::cout << "The Giant lands down his fist on ";
   player.put_player_name(); std::cout << std::endl;
-  std::cout << "-" << ATTACK1 << " HP! Your health is now: ";
+  std::cout << "-" << ATTACK1*ENEMY_ADVANTAGE << " HP! Your health is now: ";
   enemy.attack1(player); 
 }

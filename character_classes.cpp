@@ -22,8 +22,10 @@ Character::Character()
 // Player input/output
 void m_get_player_name::Player ()
 {
-  std::cout << "The soldier shall be called: ";
+  std::endl;
+  std::cout << "What shall I call you: ";
   std::getline(std::cin, player_name);
+  std::endl;
 }
 
 void m_get_player_class::Player ()

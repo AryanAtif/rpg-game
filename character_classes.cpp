@@ -22,10 +22,8 @@ Character::Character()
 // Player input/output
 void m_get_player_name::Player ()
 {
-  std::endl;
   std::cout << "What shall I call you: ";
   std::getline(std::cin, player_name);
-  std::endl;
 }
 
 void m_get_player_class::Player ()
@@ -38,6 +36,10 @@ void m_get_player_class::Player ()
 void m_put_player_name::Player ()
 {
   std::cout << player_name;
+}
+void m_put_player_class::Player ()
+{
+  std::cout << player_class;
 }
 void m_put_player_health::Player ()
 {

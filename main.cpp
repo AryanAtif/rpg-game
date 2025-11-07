@@ -17,11 +17,13 @@ int main()
   Player player1;
   std::cout << "You can here and dare to constest the might of the great giant of the cave?" << std::endl;
   std::cout << std::endl;
+
   player1.m_get_player_name(); 
   std::cout << std::endl;
   player1.m_get_player_class();
   std::cout << std::endl;
-  std::cout "you are "; player1.m_put_player_name(); std::cout << std::endl;
+  std::cout << "you are "; player1.m_put_player_name(); std::cout << std::endl;
+  std::cout << "and you're a: "
   
   // TODO: Title
   //

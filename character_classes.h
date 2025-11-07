@@ -55,8 +55,6 @@ class Enemy
     void attack1 (Player player);
     void attack2 (Player player);
     void attack3 (Player player);
-
-    
 };
 
 #endif

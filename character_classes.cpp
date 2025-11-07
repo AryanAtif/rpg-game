@@ -1,6 +1,7 @@
 #include <iostream> 
 #include "character_classes.h"
 
+const int HEALTH = 100;
 const int ENEMY_ADVANTAGE = 1;
 const int ATTACK1 = 5;
 const int ATTACK2 = 15;
@@ -11,7 +12,7 @@ const int ATTACK3 = 25;
 
 Character::Character()
 {
-  health = 100; 
+  health = HEALTH; 
 }
 
 // Player class 
@@ -83,7 +84,6 @@ void attack3::Enemy (Player player)
 {
   player.health -= (ATTACK3*ENEMY_ADVANTAGE);
 }
-
 
 
 

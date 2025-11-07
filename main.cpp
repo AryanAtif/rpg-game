@@ -51,7 +51,7 @@ void attack1(Player player, Enemy enemy)
 {
   std::cout << "Goblin shot!" << std::endl;
   std::cout << "-" << ATTACK1 << " HP damage dealt on the giant." << std::endl;
-  std::cout << "The giant\'s health is now: "; enemy.m_put_health; std::cout << std::endl;
+  std::cout << "The giant\'s health is now: "; enemy.m_put_health(); std::cout << std::endl;
 }
 void attack1(Enemy enemy, Player player)
 {

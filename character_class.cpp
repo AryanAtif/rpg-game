@@ -1,6 +1,6 @@
 #include <iostream>
 #include "string_functions.h"
-#include "character_classes.h"
+#include "character_class.h"
 
 const int HEALTH = 100;
 const int ENEMY_ADVANTAGE = 1;

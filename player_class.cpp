@@ -1,7 +1,7 @@
 #include <iostream>
 #include "string_function.h"
 #include "character_classes.h"
-
+#include "player_class.h"
 //////////////////// Player class
 
 // Player input/output

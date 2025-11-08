@@ -36,9 +36,9 @@ class Player : public Character
     void m_put_class();
     // Attacks
     //
-    void m_attack1(Enemy enemy);
-    void m_attack2(Enemy enemy);
-    void m_attack3(Enemy enemy);
+    void m_attack1(Enemy& enemy);
+    void m_attack2(Enemy& enemy);
+    void m_attack3(Enemy& enemy);
 };
 
 
@@ -47,9 +47,9 @@ class Enemy : public Character
   public:
     // Attacks
     //
-    void m_attack1 (Player player);
-    void m_attack2 (Player player);
-    void m_attack3 (Player player);
+    void m_attack1 (Player& player);
+    void m_attack2 (Player& player);
+    void m_attack3 (Player& player);
 };
 
 

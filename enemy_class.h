@@ -1,4 +1,4 @@
-#ifndef 
+#ifndef ENEMY_CLASS_H
 #define ENEMY_CLASS_H
 #include "character_class.h"
 

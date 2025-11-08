@@ -1,6 +1,8 @@
 #include <iostream>
 #include "string_functions.h"
-#include "character_classes.h"
+#include "character_class.h"
+#include "player_class.h"
+#include "enemy_class.h"
 
 void attack1(Player player, Enemy enemy); //attack on the player
 void attack1(Enemy enemy, Player player);

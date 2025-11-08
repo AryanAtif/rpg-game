@@ -1,4 +1,4 @@
-#ifndef 
+#ifndef PLAYER_CLASS_H 
 #define PLAYER_CLASS_H
 #include "character_class.h"
 

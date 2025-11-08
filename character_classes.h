@@ -12,7 +12,7 @@ class Character
 {
   private:
     std::string character_name;
-  protected: 
+  protected:
     int health;
     int attack2_count;
     int attack3_count;
@@ -26,13 +26,17 @@ class Player : public Character
   private:
     std::string player_name;
     std::string player_class; // class here means the wizard class or the knight class
-  
+
   public:
     void m_get_name();
     void m_get_class();
     void m_put_name();
     void m_put_class();
-
+    // Attacks
+    //
+    void m_attack1(Enemy enemy);
+    void m_attack2(Enemy enemy);
+    void m_attack3(Enemy enemy);
 };
 
 
@@ -71,4 +75,5 @@ class Archer : public Player
     void m_shoot_nuclear_arrow (Enemy enemy_character);
 };
 #endif
+
 

@@ -19,5 +19,6 @@ class Character
   public:
     Character ();//: health(100)
     void m_put_health();
+    void m_reduce_health(int damage);
 };
 #endif

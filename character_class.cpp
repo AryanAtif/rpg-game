@@ -22,3 +22,8 @@ void Character::m_put_health()
 {
   std::cout << health;
 }
+
+void Character::m_reduce_health(int damage)
+{
+  health -= damage;
+}

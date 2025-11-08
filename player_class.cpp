@@ -90,34 +90,34 @@ void Player::m_attack3(Enemy& enemy)
 
 void Soldier::m_shoot_gun(Enemy& enemy)
 {
-  enemy.health -= ATTACK1;
+  enemy.reduce_health(ATTACK1);
 }
 
 void Soldier::m_launch_rocket(Enemy& enemy)
 {
  //TODO: Add a possible debuff here
- enemy.health -= ATTACK2;
+ enemy.reduce_health(ATTACK2);
 }
 
 void Soldier::m_call_in_airstrikes(Enemy& enemy)
-
+{
   //TODO: Add a possible debuff here as well
-  enemy.health -= ATTACK3;
+  enemy.reduce_health(ATTACK3);
 }
 
 // Archer Class class (haha 2)
 //
 void Archer::m_shoot_arrow (Enemy& enemy)
 {
-  enemy.health -= ATTACK1;
+  enemy.reduce_health(ATTACK1);
 }
 
 void Archer::m_shoot_flame_arrow (Enemy& enemy)
 {
-  enemy.health -= ATTACK2;
+  enemy.reduce_health(ATTACK2);
 }
 void Archer::m_shoot_nuclear_arrow (Enemy& enemy)
 {
-  enemy.health -= ATTACK3;
+  enemy.reduce_health(ATTACK3);
 }
 

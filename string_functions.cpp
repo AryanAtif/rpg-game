@@ -25,7 +25,7 @@ bool is_uppercase(char input_char)
 std::string capitialize (std::string input_string)
 {
 
-  for (int i = 0; i < length(input_string); i++)
+  for (int i = 0; i < strlength(input_string); i++)
   {
     if(!is_uppercase){
       input_string[i] -= 32;

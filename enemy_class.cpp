@@ -1,6 +1,6 @@
 #include <iostream>
 #include "string_functions.h"
-#include "character_classes.h"
+#include "character_class.h"
 #include "enemy_class.h"
 // Enemy Class
 //

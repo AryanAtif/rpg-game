@@ -1,6 +1,6 @@
 #include <iostream>
-#include "string_function.h"
-#include "character_classes.h"
+#include "string_functions.h"
+#include "character_class.h"
 #include "player_class.h"
 //////////////////// Player class
 

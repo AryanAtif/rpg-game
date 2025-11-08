@@ -21,6 +21,8 @@ class Character
     void m_put_health();
 };
 
+class Enemy : public Character; // to not get the circulations error or whateves
+
 class Player : public Character
 {
   private:
